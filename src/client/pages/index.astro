@@ -1,5 +1,7 @@
 ---
-import Hello from "../components/Hello.astro";
+import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+import { Signup } from "../components/Signup";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +9,22 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Hello />
+  <Hero />
+  <div class="flex justify-center pb-4">
+    <Signup />
+  </div>
+  <div class="flex flex-col gap-4 p-4 md:flex-row md:justify-center">
+    <Card
+      title="Ubica tu Cafe"
+      description="quieres tomar un buencafe y no sabes donde? Ubica los mas cercanos"
+    />
+    <Card
+      title="Recomedaciones"
+      description="Ve los comentarios de otros usuarios y encuentra tu cafe favorito"
+    />
+    <Card
+      title="Otra card"
+      description="No se que poner aqui le preguntaremos a chat gpt"
+    />
+  </div>
 </Layout>
