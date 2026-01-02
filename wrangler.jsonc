@@ -1,0 +1,5 @@
+{
+  "name": "cloudflare-hono-wailtlist",
+  "compatibility_date": "2025-12-10",
+  "main": "src/server/index.ts",
+}
