@@ -1,7 +1,8 @@
 CREATE TABLE `subscribers` (
 	`id` integer PRIMARY KEY NOT NULL,
 	`email` text NOT NULL,
-	`created_at` integer DEFAULT '"2026-01-14T02:34:46.135Z"' NOT NULL,
+	`created_at` integer DEFAULT '"2026-01-14T16:18:24.956Z"' NOT NULL,
+	`updated_at` integer DEFAULT '"2026-01-14T16:18:24.956Z"' NOT NULL,
 	`traffic_source` text,
 	`device` text,
 	`email_verified` integer,

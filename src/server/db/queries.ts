@@ -6,9 +6,13 @@ export const insertSubscriber = async (
   newSubscriber: schema.NewSubscriber,
 ) => {
   const db = getDb(d1Database);
-  const [result] = await db
-    .insert(schema.subscribers)
-    .values(newSubscriber)
-    .returning();
-  return result;
+  try {
+    const [result] = await db
+      .insert(schema.subscribers)
+      .values(newSubscriber)
+      .returning();
+    return result;
+  } catch (error) {
+    throw new Error("Failed to insert subscriber: " + (error as Error).message);
+  }
 };
