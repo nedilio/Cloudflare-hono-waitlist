@@ -2,4 +2,39 @@
   "name": "cloudflare-hono-wailtlist",
   "compatibility_date": "2025-12-10",
   "main": "src/server/index.ts",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "coffee_local_db",
+      "database_id": "123"
+    }
+  ],
+  "vars": {
+    "ENVIRONMENT": "dev"
+  },
+  "env": {
+    "staging": {
+      "vars": {
+        "ENVIRONMENT": "staging",
+        "POLICY_AUD": "d446e2a03c2b3c6072e62f41bb3e18638b0a388605fc6a087977496fcbc6d521",
+        "CF_ACCESS_DOMAIN": "https://vacio-versado-0a.cloudflareaccess.com"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "coffee_staging_db",
+          "database_id": "682a650d-bdba-4291-a031-0db8a8b319f6"
+        }
+      ]
+    },
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production"
+      }
+    }
+  }
 }
